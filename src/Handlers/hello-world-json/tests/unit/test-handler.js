@@ -9,7 +9,7 @@ let context;
 
 describe('Tests index', function () {
     it('verifies successful response', async () => {
-        const result = await app.helloWorldJsonHandler(event, context)
+        const result = await app.helloWorldFunction(event, context)
 
         expect(result).to.be.an('object');
         expect(result.statusCode).to.equal(200);

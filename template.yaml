@@ -5,6 +5,6 @@ Resources:
   HelloWorldJsonFunctionDemo:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app.helloWorldJsonHandler
+      Handler: app.helloWorldFunction
       Runtime: nodejs10.x
       CodeUri: ./src/Handlers/hello-world-json

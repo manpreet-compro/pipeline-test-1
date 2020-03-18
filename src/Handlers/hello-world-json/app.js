@@ -12,7 +12,7 @@
  * @returns {Object} object - API Gateway Lambda Proxy Output Format
  * 
  */
-exports.helloWorldJsonHandler = async (event, context) => {
+exports.helloWorldFunction = async (event, context) => {
     let response;
     return "Hello World"
 };
