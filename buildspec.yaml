@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - python -V
+      - pip -q install awscli
+      - pip -q install aws-sam-cli
+  pre_build:
+    commands:
+      - sam validate
+  build:
+    commands:
+      - sam build
+  post_build:
+    commands:
+      - sam package --template-file template.yaml --s3-prefix hello --s3-bucket cup-qa-sam-seed --output-template-file packaged.yaml
+artifacts:
+  files:
+    - packaged.yaml
