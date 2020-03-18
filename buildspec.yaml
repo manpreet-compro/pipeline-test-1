@@ -7,9 +7,6 @@ phases:
       - python -V
       - pip -q install awscli
       - pip -q install aws-sam-cli
-  pre_build:
-    commands:
-      - sam validate
   build:
     commands:
       - sam build
